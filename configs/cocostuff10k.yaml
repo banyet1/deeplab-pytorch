@@ -4,7 +4,11 @@ EXP:
 
 DATASET:
     NAME: cocostuff10k
+<<<<<<< HEAD
     ROOT: /root/cocostuff-10k-v1.1
+=======
+    ROOT: /watercolor/test/image
+>>>>>>> dev
     LABELS: ./data/datasets/cocostuff/labels.txt
     N_CLASSES: 182
     IGNORE_LABEL: 255

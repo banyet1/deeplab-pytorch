@@ -4,7 +4,11 @@ EXP:
 
 DATASET:
     NAME: cocostuff164k
+<<<<<<< HEAD
     ROOT: /root/deeplab-pytorch/164k
+=======
+    ROOT: /root/watercolor/test
+>>>>>>> dev
     LABELS: ./data/datasets/cocostuff/labels.txt
     N_CLASSES: 182
     IGNORE_LABEL: 255
@@ -12,7 +16,7 @@ DATASET:
     SPLIT:
         TRAIN: train2017
         VAL: val2017
-        TEST:
+        TEST: 
 
 DATALOADER:
     NUM_WORKERS: 0

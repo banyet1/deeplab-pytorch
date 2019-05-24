@@ -23,12 +23,7 @@ import glob
 
 from libs.models import *
 from libs.utils import DenseCRF
-<<<<<<< HEAD
 
-=======
-from PIL import Image
-import scipy.misc
->>>>>>> dev
 
 def get_device(cuda):
     cuda = cuda and torch.cuda.is_available()
@@ -176,20 +171,9 @@ def single(config_path, model_path, image_path, cuda, crf):
         if (i+1) % 10 == 0:
             print(f'processed: {i+1}/{len(image_files)}')
         label_file = image_file.split('.')[0] + '_label.' + 'png'#image_file.split('.')[1]
-<<<<<<< HEAD
         # print(labelmap.shape)
         # print(labelmap)
         imsave(label_file, labelmap)
-=======
-        #print(labelmap.shape)
-        print(labelmap)
-        #img = Image.frombuffer('RGB', (1024, 1024), labelmap)
-        #img = Image.frombytes('RGB', (1024, 1024), labelmap)
-        #img = convert_from_color_segmentation(img)
-        #img.save(label_file)
-        #imsave(label_file, labelmap.astype(np.float32), format="png")
-        scipy.misc.toimage(labelmap, cmin=0.0, cmax=255).save(label_file)
->>>>>>> dev
 
     # Single
     # image = cv2.imread(image_path, cv2.IMREAD_COLOR)
