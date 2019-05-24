@@ -103,6 +103,8 @@ class _BaseDataset(data.Dataset):
         return image, label
 
     def __getitem__(self, index):
+        #import pdb
+        #pdb.set_trace()
         image_id, image, label = self._load_data(index)
         if self.augment:
             image, label = self._augmentation(image, label)
@@ -110,6 +112,7 @@ class _BaseDataset(data.Dataset):
         image -= self.mean_bgr
         # HWC -> CHW
         image = image.transpose(2, 0, 1)
+        #print("%s", label)
         return image_id, image.astype(np.float32), label.astype(np.int64)
 
     def __len__(self):

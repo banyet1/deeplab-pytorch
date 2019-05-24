@@ -439,6 +439,7 @@ def single(config_path, model_path, image_path, cuda, crf):
         label_file = image_file.split('.')[0] + '_label.' + image_file.split('.')[1]
         # print(labelmap.shape)
         # print(labelmap)
+        print(label_file, labelmap)
         imsave(label_file, labelmap)
 
     # Single

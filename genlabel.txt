@@ -1,0 +1,1 @@
+python d.py single -c cocostuff164k.yaml -m deeplabv2_resnet101_msc-cocostuff164k-100000.pth -i ~/ltest

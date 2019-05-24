@@ -1,17 +1,17 @@
 EXP:
-    ID: cocostuff164k
+    ID: cocostuff10k
     OUTPUT_DIR: data
 
 DATASET:
-    NAME: cocostuff164k
-    ROOT: /root/deeplab-pytorch/164k
+    NAME: cocostuff10k
+    ROOT: /root/coco10k
     LABELS: ./data/datasets/cocostuff/labels.txt
     N_CLASSES: 182
     IGNORE_LABEL: 255
     SCALES: [0.5, 0.75, 1.0, 1.25, 1.5]
     SPLIT:
-        TRAIN: train2017
-        VAL: val2017
+        TRAIN: train
+        VAL: test
         TEST:
 
 DATALOADER:
@@ -23,7 +23,7 @@ IMAGE:
         G: 116.669
         B: 104.008
     SIZE:
-        BASE: # None
+        BASE:
         TRAIN: 321
         TEST: 513
 
@@ -36,8 +36,8 @@ MODEL:
 SOLVER:
     BATCH_SIZE:
         TRAIN: 5
-        TEST: 1
-    ITER_MAX: 100000
+        TEST: 5
+    ITER_MAX: 20000
     ITER_SIZE: 2
     ITER_SAVE: 5000
     ITER_TB: 100
